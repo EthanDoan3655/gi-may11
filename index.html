@@ -1,0 +1,73 @@
+<!-- // // Create two buttons, one that when clicked turns the background of the body red. The 
+// other, when clicked, turns the body's background color white. Each of the background colors 
+// should be defined as class styles and when the buttons are pushed the body's classList is 
+// updated to include the correct class for the background. 
+// Create a single function that takes an input className and updates the body's classList to 
+// ONLY include that className
+// *Note: Check Canvas for the starter code needed for this exercise. The starter code will be 
+// located in a folder named hard_js.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dom Manipulation Hard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: red;
+    }
+
+    button {
+      padding: 10px;
+      float: right;
+    }
+
+    .bg-royalblue {
+      background-color: rgb(4, 0, 254);
+    }
+
+    .bg-white {
+      background-color: white;
+    }
+    img{
+      width:80%;
+      height:80%;
+      
+    }
+    img.hover{
+      -moz-box-shadow: 0 0 10px #ccc;
+      -webkit-box-shadow: 0 0 10px #ccc;
+      box-shadow: 0 0 10px #ccc;
+    }
+  </style> <!---So I have to utilize the bottons and bg elements-->
+  <!---I could use an onclick function with the buttons-->
+  <!--button onclick, updates background to bg red or white-->
+  <!---<button onclick="myFunction()">Click me</button>--->
+  <!---<button onclick="getElementById('demo').innerHTML = Date()">What is the time?</button>-->
+
+</head>
+<body>
+  <img src="snoop.png" alt="">
+
+    <button onclick="updateTheBackground('bg-royalblue')">
+      Turn it Royal Blue!
+    </button>
+    <button onclick="updateTheBackground('bg-white')">
+      Turn it white!
+    </button>
+    <script>
+     // Do Stuff Here
+     window.updateTheBackground = function(className) {
+    document.querySelector("body").classList.add(className); //selecting the body tag within the query selector changes the whole "body" section to the color
+     }
+    </script>
+</body>
+</html>
+
